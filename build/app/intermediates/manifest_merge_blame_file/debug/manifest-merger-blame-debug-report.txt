@@ -1,0 +1,208 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.shazlycode.openbook"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:3:9-70
+15-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:3:26-68
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:5:9-82
+16-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:5:26-80
+17
+18    <queries>
+18-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:7:9-22:11
+19
+20        <!-- If your app checks for SMS support -->
+21        <intent>
+21-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:9:3-12:12
+22            <action android:name="android.intent.action.VIEW" />
+22-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:10:5-57
+22-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:10:13-54
+23
+24            <data android:scheme="https" />
+24-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:11:5-36
+24-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:11:11-33
+25        </intent>
+26        <!-- If your app checks for call support -->
+27        <intent>
+27-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:14:3-17:12
+28            <action android:name="android.intent.action.VIEW" />
+28-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:10:5-57
+28-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:10:13-54
+29
+30            <data android:scheme="tel" />
+30-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:11:5-36
+30-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:11:11-33
+31        </intent>
+32        <!-- If your application checks for inAppBrowserView launch mode support -->
+33        <intent>
+33-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:19:3-21:12
+34            <action android:name="android.support.customtabs.action.CustomTabsService" />
+34-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:20:5-82
+34-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:20:13-79
+35        </intent>
+36    </queries>
+37    <!--
+38 Required to query activities that can process text, see:
+39         https://developer.android.com/training/package-visibility and
+40         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+41
+42         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+43    -->
+44    <queries>
+44-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:7:9-22:11
+45        <intent>
+46            <action android:name="android.intent.action.PROCESS_TEXT" />
+47
+48            <data android:mimeType="text/plain" />
+48-->E:\coding\Flutter Projects\openbook\android\app\src\main\AndroidManifest.xml:11:5-36
+49        </intent>
+50    </queries>
+51
+52    <permission
+52-->[androidx.core:core:1.13.1] C:\Users\drahm\.gradle\caches\transforms-3\4cefa050b0c4ea9b1f45909d19944071\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+53        android:name="com.shazlycode.openbook.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+53-->[androidx.core:core:1.13.1] C:\Users\drahm\.gradle\caches\transforms-3\4cefa050b0c4ea9b1f45909d19944071\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+54        android:protectionLevel="signature" />
+54-->[androidx.core:core:1.13.1] C:\Users\drahm\.gradle\caches\transforms-3\4cefa050b0c4ea9b1f45909d19944071\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+55
+56    <uses-permission android:name="com.shazlycode.openbook.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+56-->[androidx.core:core:1.13.1] C:\Users\drahm\.gradle\caches\transforms-3\4cefa050b0c4ea9b1f45909d19944071\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+56-->[androidx.core:core:1.13.1] C:\Users\drahm\.gradle\caches\transforms-3\4cefa050b0c4ea9b1f45909d19944071\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+57
+58    <application
+59        android:name="android.app.Application"
+60        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+60-->[androidx.core:core:1.13.1] C:\Users\drahm\.gradle\caches\transforms-3\4cefa050b0c4ea9b1f45909d19944071\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+61        android:debuggable="true"
+62        android:extractNativeLibs="true"
+63        android:icon="@mipmap/ic_launcher"
+64        android:label="openbook" >
+65        <activity
+66            android:name="com.shazlycode.openbook.MainActivity"
+67            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+68            android:exported="true"
+69            android:hardwareAccelerated="true"
+70            android:launchMode="singleTop"
+71            android:taskAffinity=""
+72            android:theme="@style/LaunchTheme"
+73            android:windowSoftInputMode="adjustResize" >
+74
+75            <!--
+76                 Specifies an Android theme to apply to this Activity as soon as
+77                 the Android process has started. This theme is visible to the user
+78                 while the Flutter UI initializes. After that, this theme continues
+79                 to determine the Window background behind the Flutter UI.
+80            -->
+81            <meta-data
+82                android:name="io.flutter.embedding.android.NormalTheme"
+83                android:resource="@style/NormalTheme" />
+84
+85            <intent-filter>
+86                <action android:name="android.intent.action.MAIN" />
+87
+88                <category android:name="android.intent.category.LAUNCHER" />
+89            </intent-filter>
+90        </activity>
+91        <!--
+92             Don't delete the meta-data below.
+93             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+94        -->
+95        <meta-data
+96            android:name="flutterEmbedding"
+97            android:value="2" />
+98
+99        <activity
+99-->[:url_launcher_android] E:\coding\Flutter Projects\openbook\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-11:74
+100            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+100-->[:url_launcher_android] E:\coding\Flutter Projects\openbook\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-74
+101            android:exported="false"
+101-->[:url_launcher_android] E:\coding\Flutter Projects\openbook\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-37
+102            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+102-->[:url_launcher_android] E:\coding\Flutter Projects\openbook\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-71
+103
+104        <uses-library
+104-->[androidx.window:window:1.2.0] C:\Users\drahm\.gradle\caches\transforms-3\b61292485483c7499e83c4f5c6f9bd1a\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+105            android:name="androidx.window.extensions"
+105-->[androidx.window:window:1.2.0] C:\Users\drahm\.gradle\caches\transforms-3\b61292485483c7499e83c4f5c6f9bd1a\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+106            android:required="false" />
+106-->[androidx.window:window:1.2.0] C:\Users\drahm\.gradle\caches\transforms-3\b61292485483c7499e83c4f5c6f9bd1a\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+107        <uses-library
+107-->[androidx.window:window:1.2.0] C:\Users\drahm\.gradle\caches\transforms-3\b61292485483c7499e83c4f5c6f9bd1a\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+108            android:name="androidx.window.sidecar"
+108-->[androidx.window:window:1.2.0] C:\Users\drahm\.gradle\caches\transforms-3\b61292485483c7499e83c4f5c6f9bd1a\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+109            android:required="false" />
+109-->[androidx.window:window:1.2.0] C:\Users\drahm\.gradle\caches\transforms-3\b61292485483c7499e83c4f5c6f9bd1a\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+110
+111        <provider
+111-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\drahm\.gradle\caches\transforms-3\a4def40035927cb6d856303427b50933\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+112            android:name="androidx.startup.InitializationProvider"
+112-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\drahm\.gradle\caches\transforms-3\a4def40035927cb6d856303427b50933\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
+113            android:authorities="com.shazlycode.openbook.androidx-startup"
+113-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\drahm\.gradle\caches\transforms-3\a4def40035927cb6d856303427b50933\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
+114            android:exported="false" >
+114-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\drahm\.gradle\caches\transforms-3\a4def40035927cb6d856303427b50933\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
+115            <meta-data
+115-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\drahm\.gradle\caches\transforms-3\a4def40035927cb6d856303427b50933\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+116                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+116-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\drahm\.gradle\caches\transforms-3\a4def40035927cb6d856303427b50933\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+117                android:value="androidx.startup" />
+117-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\drahm\.gradle\caches\transforms-3\a4def40035927cb6d856303427b50933\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+118            <meta-data
+118-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+119                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+120                android:value="androidx.startup" />
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+121        </provider>
+122
+123        <receiver
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+124            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+125            android:directBootAware="false"
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+126            android:enabled="true"
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+127            android:exported="true"
+127-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+128            android:permission="android.permission.DUMP" >
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+129            <intent-filter>
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+130                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+131            </intent-filter>
+132            <intent-filter>
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+133                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+133-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+133-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+134            </intent-filter>
+135            <intent-filter>
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+136                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+136-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+136-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+137            </intent-filter>
+138            <intent-filter>
+138-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+139                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+139-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+139-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\drahm\.gradle\caches\transforms-3\ec9fdb662d7f540d2603f340c7b5ab14\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+140            </intent-filter>
+141        </receiver>
+142    </application>
+143
+144</manifest>
