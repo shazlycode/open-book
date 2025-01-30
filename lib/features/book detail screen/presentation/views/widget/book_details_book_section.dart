@@ -1,8 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:openbook/core/conistants/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../../../../core/conistants/styles.dart';
 import '../../../../books home/data/book_model/book_model.dart';
 
